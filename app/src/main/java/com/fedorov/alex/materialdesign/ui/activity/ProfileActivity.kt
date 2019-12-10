@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
+import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -18,6 +19,7 @@ import com.fedorov.alex.materialdesign.presentation.presenter.ProfilePresenter
 import com.fedorov.alex.materialdesign.presentation.view.ProfileView
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import moxy.MvpAppCompatActivity
@@ -79,6 +81,14 @@ class ProfileActivity : MvpAppCompatActivity(), ProfileView {
             R.id.hide_progressBar -> presenter.onClickHideProgressBar()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+        if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
+            drawer_layout.closeDrawers()
+        } else {
+            super.onBackPressed()
+        }
     }
 
     override fun showProgressBar() {
