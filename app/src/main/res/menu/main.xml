@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/show_progressBar"
+        android:orderInCategory="100"
+        android:title="@string/show_progressbar"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_arrow_upward"/>
+    <item
+        android:id="@+id/hide_progressBar"
+        android:orderInCategory="200"
+        android:title="@string/hide_progressbar"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_arrow_downward"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="300"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>
