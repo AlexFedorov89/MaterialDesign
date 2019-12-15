@@ -7,18 +7,18 @@
 
     <fragment
         android:id="@+id/nav_fruits"
-        android:name="com.fedorov.alex.materialdesign.ui.fragment.FruitsFragment"
+        android:name="com.fedorov.alex.materialdesign.ui.activity.profile.fragment.FruitsFragment"
         android:label="@string/menu_fruits"
         tools:layout="@layout/fragment_fruits" />
 
     <fragment
         android:id="@+id/nav_vegetables"
-        android:name="com.fedorov.alex.materialdesign.ui.fragment.VegetablesFragment"
+        android:name="com.fedorov.alex.materialdesign.ui.activity.profile.fragment.VegetablesFragment"
         android:label="@string/menu_vegetables"
         tools:layout="@layout/fragment_vegetables" />
     <fragment
         android:id="@+id/nav_nature"
-        android:name="com.fedorov.alex.materialdesign.ui.fragment.NatureFragment"
+        android:name="com.fedorov.alex.materialdesign.ui.activity.profile.fragment.NatureFragment"
         android:label="@string/menu_nature" />
 
 </navigation>

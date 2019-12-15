@@ -6,6 +6,7 @@ import android.view.inputmethod.InputMethodManager
 import com.fedorov.alex.materialdesign.R
 import com.fedorov.alex.materialdesign.presentation.presenter.LoginPresenter
 import com.fedorov.alex.materialdesign.presentation.view.LoginView
+import com.fedorov.alex.materialdesign.ui.activity.profile.ProfileActivity
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_login.*
 import moxy.MvpAppCompatActivity

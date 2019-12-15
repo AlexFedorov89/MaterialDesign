@@ -24,6 +24,10 @@ class ProfilePresenter : MvpPresenter<ProfileView>() {
         viewState.hideProgressBar()
     }
 
+    fun onClickOpenSettings(){
+        viewState.openSettings()
+    }
+
     private suspend fun startTimer() = withContext(Dispatchers.IO) {
         Thread.sleep(5000)
     }
