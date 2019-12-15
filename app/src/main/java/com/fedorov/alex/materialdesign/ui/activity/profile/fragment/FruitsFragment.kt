@@ -1,4 +1,4 @@
-package com.fedorov.alex.materialdesign.ui.fragment
+package com.fedorov.alex.materialdesign.ui.activity.profile.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

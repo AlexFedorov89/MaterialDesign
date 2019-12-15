@@ -1,4 +1,4 @@
-package com.fedorov.alex.materialdesign.ui.fragment
+package com.fedorov.alex.materialdesign.ui.activity.profile.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.fedorov.alex.materialdesign.R
 import com.fedorov.alex.materialdesign.presentation.presenter.VegetablesAdapterPresenter
 import com.fedorov.alex.materialdesign.presentation.view.VegetablesListView
-import com.fedorov.alex.materialdesign.ui.items.ItemsRVAdapter
+import com.fedorov.alex.materialdesign.ui.activity.profile.ItemsRVAdapter
 import kotlinx.android.synthetic.main.fragment_vegetables.*
 import moxy.MvpAppCompatFragment
 import moxy.presenter.InjectPresenter

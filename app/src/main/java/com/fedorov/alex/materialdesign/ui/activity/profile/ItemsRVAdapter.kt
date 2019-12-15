@@ -1,15 +1,15 @@
-package com.fedorov.alex.materialdesign.ui.items
+package com.fedorov.alex.materialdesign.ui.activity.profile
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.fedorov.alex.materialdesign.R
-import com.fedorov.alex.materialdesign.presentation.IAdapter
+import com.fedorov.alex.materialdesign.presentation.IRVAdapter
 import kotlinx.android.synthetic.main.rv_item.view.*
 
 
-class ItemsRVAdapter(private val presenter: IAdapter) :
+class ItemsRVAdapter(private val presenter: IRVAdapter) :
     RecyclerView.Adapter<ItemsRVAdapter.ItemsViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemsViewHolder {

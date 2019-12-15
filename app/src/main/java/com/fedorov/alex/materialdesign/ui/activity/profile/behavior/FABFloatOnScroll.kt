@@ -1,4 +1,4 @@
-package com.fedorov.alex.materialdesign.ui.behavior
+package com.fedorov.alex.materialdesign.ui.activity.profile.behavior
 
 import android.content.Context
 import android.util.AttributeSet

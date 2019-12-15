@@ -7,7 +7,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.activity.ProfileActivity">
+        tools:context=".ui.activity.profile.ProfileActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
             app:borderWidth="0dp"
             app:srcCompat="@android:drawable/ic_dialog_email"
             app:tint="@android:color/white"
-            app:layout_behavior=".ui.behavior.FABFloatOnScroll"/>
+            app:layout_behavior=".ui.activity.profile.behavior.FABFloatOnScroll"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

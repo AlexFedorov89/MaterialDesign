@@ -1,4 +1,4 @@
-package com.fedorov.alex.materialdesign.ui.activity
+package com.fedorov.alex.materialdesign.ui.activity.profile
 
 import android.content.Context
 import android.content.Intent
@@ -17,11 +17,12 @@ import androidx.navigation.ui.setupWithNavController
 import com.fedorov.alex.materialdesign.R
 import com.fedorov.alex.materialdesign.presentation.presenter.ProfilePresenter
 import com.fedorov.alex.materialdesign.presentation.view.ProfileView
+import com.fedorov.alex.materialdesign.ui.activity.BottomActivity
+import com.fedorov.alex.materialdesign.ui.activity.settings.SettingsActivity
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.app_bar_main.*
-import kotlinx.android.synthetic.main.content_main.*
 import moxy.MvpAppCompatActivity
 import moxy.presenter.InjectPresenter
 
@@ -79,6 +80,8 @@ class ProfileActivity : MvpAppCompatActivity(), ProfileView {
         when (item.itemId) {
             R.id.show_progressBar -> presenter.onClickShowProgressBar()
             R.id.hide_progressBar -> presenter.onClickHideProgressBar()
+            R.id.action_settings -> presenter.onClickOpenSettings()
+            R.id.action_activity_bottom -> this.startActivity(BottomActivity.newInstance(this))
         }
         return super.onOptionsItemSelected(item)
     }
@@ -104,5 +107,9 @@ class ProfileActivity : MvpAppCompatActivity(), ProfileView {
         // Enable screen touchable.
         window.clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE)
         progressbar_layout.visibility = View.INVISIBLE
+    }
+
+    override fun openSettings() {
+        this.startActivity(SettingsActivity.newInstance(this))
     }
 }

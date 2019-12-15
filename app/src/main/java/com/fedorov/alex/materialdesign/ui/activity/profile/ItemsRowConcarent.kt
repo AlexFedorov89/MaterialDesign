@@ -1,4 +1,4 @@
-package com.fedorov.alex.materialdesign.ui.items
+package com.fedorov.alex.materialdesign.ui.activity.profile
 
 interface ItemsRowConcarent {
     fun setTitle(position: Int, title: String)

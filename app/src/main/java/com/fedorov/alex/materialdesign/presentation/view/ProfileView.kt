@@ -10,4 +10,6 @@ interface ProfileView : MvpView {
     fun showProgressBar()
     @StateStrategyType(value = AddToEndSingleStrategy::class, tag = "SHOW_HIDE_PB")
     fun hideProgressBar()
+
+    fun openSettings()
 }
