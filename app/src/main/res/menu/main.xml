@@ -15,6 +15,18 @@
         android:icon="@drawable/ic_arrow_downward"/>
 
     <item
+        android:id="@+id/apply_theme_orange"
+        android:orderInCategory="230"
+        android:title="@string/orange_theme"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/apply_theme_purple"
+        android:orderInCategory="270"
+        android:title="@string/purple_theme"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/action_settings"
         android:orderInCategory="300"
         android:title="@string/action_settings"

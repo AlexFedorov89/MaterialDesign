@@ -5,8 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal|center_vertical"
     android:orientation="vertical"
-    tools:context=".ui.activity.LoginActivity"
-    android:theme="@style/AppTheme.NoActionBar">
+    tools:context=".ui.activity.LoginActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"

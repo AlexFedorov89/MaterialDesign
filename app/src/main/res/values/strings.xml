@@ -26,5 +26,7 @@
     Полученные результаты могут быть использованы специалистами в области здравоохранения, чтобы убедить людей переходить на здоровое питание, отмечается в статье.
     </string>
     <string name="picture_of_recyclerview">Picture of RecyclerView</string>
+    <string name="orange_theme">Orange theme</string>
+    <string name="purple_theme">Purple theme</string>
 
 </resources>

@@ -3,6 +3,7 @@ package com.fedorov.alex.materialdesign.ui.activity.settings
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import com.fedorov.alex.materialdesign.App
 import com.fedorov.alex.materialdesign.R
 import com.fedorov.alex.materialdesign.presentation.presenter.SettingsPresenter
 import com.fedorov.alex.materialdesign.presentation.view.SettingsView
@@ -29,6 +30,7 @@ class SettingsActivity : MvpAppCompatActivity(), SettingsView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme((application as App).currentTheme)
         setContentView(R.layout.settings_activity)
 
         view_pager.adapter = adapter

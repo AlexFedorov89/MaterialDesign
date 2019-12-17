@@ -3,6 +3,7 @@ package com.fedorov.alex.materialdesign.ui.activity
 import android.app.Activity
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
+import com.fedorov.alex.materialdesign.App
 import com.fedorov.alex.materialdesign.R
 import com.fedorov.alex.materialdesign.presentation.presenter.LoginPresenter
 import com.fedorov.alex.materialdesign.presentation.view.LoginView
@@ -17,8 +18,13 @@ class LoginActivity : MvpAppCompatActivity(), LoginView {
     @InjectPresenter
     internal lateinit var presenter: LoginPresenter
 
+    var themeId = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        themeId = (application as App).currentTheme
+        setTheme(themeId)
+
         setContentView(R.layout.activity_login)
 
         btnLogin.setOnClickListener {
@@ -26,7 +32,7 @@ class LoginActivity : MvpAppCompatActivity(), LoginView {
             presenter.checkLogin(txtLogin.text.toString())
         }
 
-        btnFinish.setOnClickListener{
+        btnFinish.setOnClickListener {
             presenter.closeApp()
         }
     }
@@ -53,5 +59,12 @@ class LoginActivity : MvpAppCompatActivity(), LoginView {
             currentFocus!!.windowToken,
             0
         )
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        if ((application as App).currentTheme != themeId) {
+            recreate()
+        }
     }
 }

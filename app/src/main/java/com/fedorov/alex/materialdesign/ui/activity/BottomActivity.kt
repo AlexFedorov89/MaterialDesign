@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.fedorov.alex.materialdesign.App
 import com.fedorov.alex.materialdesign.R
 import com.fedorov.alex.materialdesign.ui.activity.settings.fragment.Fragment1
 import com.fedorov.alex.materialdesign.ui.activity.settings.fragment.Fragment2
@@ -26,6 +27,7 @@ class BottomActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme((application as App).currentTheme)
         setContentView(R.layout.activity_bottom)
 
         navigation_view.setOnNavigationItemSelectedListener { item ->

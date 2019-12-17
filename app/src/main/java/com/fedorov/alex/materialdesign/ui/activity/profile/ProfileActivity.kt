@@ -14,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.fedorov.alex.materialdesign.App
 import com.fedorov.alex.materialdesign.R
 import com.fedorov.alex.materialdesign.presentation.presenter.ProfilePresenter
 import com.fedorov.alex.materialdesign.presentation.view.ProfileView
@@ -44,6 +45,8 @@ class ProfileActivity : MvpAppCompatActivity(), ProfileView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme((application as App).currentTheme)
+
         setContentView(R.layout.activity_profile)
         setSupportActionBar(toolbar)
 
@@ -78,6 +81,8 @@ class ProfileActivity : MvpAppCompatActivity(), ProfileView {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.apply_theme_orange -> presenter.onClickApplyTheme(R.style.AppThemeOrange)
+            R.id.apply_theme_purple -> presenter.onClickApplyTheme(R.style.AppTheme)
             R.id.show_progressBar -> presenter.onClickShowProgressBar()
             R.id.hide_progressBar -> presenter.onClickHideProgressBar()
             R.id.action_settings -> presenter.onClickOpenSettings()
@@ -111,5 +116,12 @@ class ProfileActivity : MvpAppCompatActivity(), ProfileView {
 
     override fun openSettings() {
         this.startActivity(SettingsActivity.newInstance(this))
+    }
+
+    override fun applyTheme(id: Int) {
+        (application as App).currentTheme = id
+        recreate()
+        // How to fix it?
+        finish()
     }
 }
