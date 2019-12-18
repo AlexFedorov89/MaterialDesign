@@ -119,9 +119,12 @@ class ProfileActivity : MvpAppCompatActivity(), ProfileView {
     }
 
     override fun applyTheme(id: Int) {
-        (application as App).currentTheme = id
-        recreate()
-        // How to fix it?
-        finish()
+        if ((application as App).currentTheme != id) {
+            (application as App).currentTheme = id
+            recreate()
+            // How to fix it?
+            finish()
+        }
+
     }
 }

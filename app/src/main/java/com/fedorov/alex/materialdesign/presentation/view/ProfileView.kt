@@ -2,16 +2,18 @@ package com.fedorov.alex.materialdesign.presentation.view
 
 import moxy.MvpView
 import moxy.viewstate.strategy.AddToEndSingleStrategy
-import moxy.viewstate.strategy.SkipStrategy
+import moxy.viewstate.strategy.SingleStateStrategy
 import moxy.viewstate.strategy.StateStrategyType
 
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface ProfileView : MvpView {
     @StateStrategyType(value = AddToEndSingleStrategy::class, tag = "SHOW_HIDE_PB")
     fun showProgressBar()
+
     @StateStrategyType(value = AddToEndSingleStrategy::class, tag = "SHOW_HIDE_PB")
     fun hideProgressBar()
+
     fun openSettings()
-    @StateStrategyType(value = SkipStrategy::class)
-    fun applyTheme(id:Int)
+    @StateStrategyType(value = SingleStateStrategy::class)
+    fun applyTheme(id: Int)
 }
