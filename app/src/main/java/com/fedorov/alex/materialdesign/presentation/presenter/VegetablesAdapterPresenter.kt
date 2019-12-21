@@ -1,8 +1,8 @@
 package com.fedorov.alex.materialdesign.presentation.presenter
 
 import com.fedorov.alex.materialdesign.interactor.ListInteractor
-import com.fedorov.alex.materialdesign.model.RepositoryVegetables
-import com.fedorov.alex.materialdesign.presentation.IRVAdapter
+import com.fedorov.alex.materialdesign.model.RepositoryVegetablesImpl
+import com.fedorov.alex.materialdesign.presentation.RVAdapter
 import com.fedorov.alex.materialdesign.presentation.view.VegetablesListView
 import com.fedorov.alex.materialdesign.ui.activity.profile.ItemsRowConcarent
 import moxy.InjectViewState
@@ -10,8 +10,8 @@ import moxy.MvpPresenter
 
 
 @InjectViewState
-class VegetablesAdapterPresenter : MvpPresenter<VegetablesListView>(), IRVAdapter {
-    private val repository = RepositoryVegetables()
+class VegetablesAdapterPresenter : MvpPresenter<VegetablesListView>(), RVAdapter {
+    private val repository = RepositoryVegetablesImpl()
     private val interactor = ListInteractor(repository)
 
     fun updateUI() {

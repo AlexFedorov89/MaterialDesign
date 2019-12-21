@@ -19,6 +19,7 @@
     <fragment
         android:id="@+id/nav_nature"
         android:name="com.fedorov.alex.materialdesign.ui.activity.profile.fragment.NatureFragment"
-        android:label="@string/menu_nature" />
+        android:label="@string/menu_nature"
+        tools:layout="@layout/fragment_nature"/>
 
 </navigation>

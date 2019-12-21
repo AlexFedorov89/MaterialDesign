@@ -122,9 +122,6 @@ class ProfileActivity : MvpAppCompatActivity(), ProfileView {
         if ((application as App).currentTheme != id) {
             (application as App).currentTheme = id
             recreate()
-            // How to fix it?
-            finish()
         }
-
     }
 }

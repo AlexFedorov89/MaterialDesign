@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.fedorov.alex.materialdesign.R
-import com.fedorov.alex.materialdesign.presentation.IRVAdapter
+import com.fedorov.alex.materialdesign.presentation.RVAdapter
 import kotlinx.android.synthetic.main.rv_item.view.*
 
 
-class ItemsRVAdapter(private val presenter: IRVAdapter) :
+class ItemsRVAdapter(private val presenter: RVAdapter) :
     RecyclerView.Adapter<ItemsRVAdapter.ItemsViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemsViewHolder {

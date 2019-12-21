@@ -48,4 +48,3 @@ class ProfilePresenter : MvpPresenter<ProfileView>() {
         Thread.sleep(5000)
     }
 }
-
