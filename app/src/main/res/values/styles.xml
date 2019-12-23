@@ -6,22 +6,42 @@
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="fab_backgroundTint">@color/colorAccent</item>
+        <item name="rectangle_center_color">#ab47bc</item>
+        <item name="rectangle_start_color">#df78ef</item>
+        <item name="rectangle_end_color">#790e8b</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <style name="AppThemeOrange" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ff9100</item>
+        <item name="colorPrimaryDark">#c56200</item>
+        <item name="colorAccent">#ff3d00</item>
+        <item name="fab_backgroundTint">#ff9100</item>
+        <item name="rectangle_center_color">#FFB866</item>
+        <item name="rectangle_start_color">#ff9100</item>
+        <item name="rectangle_end_color">#ff3d00</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+    </style>
+
+    <!-- This will set the fade in animation on all your activities by default -->
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
     </style>
 
     <style name="MaterialButtonsText" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@android:color/black</item>
     </style>
 
-    <style name="AppTheme.FloatingAccentButtonOverlay">
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="settings_fragment_textview">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+    </style>
 </resources>

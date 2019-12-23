@@ -10,6 +10,17 @@ import moxy.MvpPresenter
 
 @InjectViewState
 class ProfilePresenter : MvpPresenter<ProfileView>() {
+
+    private var currentTheme: Int? = null
+
+    fun getCurrentTheme(default:Int):Int{
+        return if (currentTheme == null){
+            default
+        } else{
+            currentTheme as Int
+        }
+    }
+
     fun onClickShowProgressBar() {
         viewState.showProgressBar()
 
@@ -24,8 +35,16 @@ class ProfilePresenter : MvpPresenter<ProfileView>() {
         viewState.hideProgressBar()
     }
 
+    fun onClickOpenSettings() {
+        viewState.openSettings()
+    }
+
+    fun onClickApplyTheme(id: Int) {
+        currentTheme = id
+        viewState.applyTheme(id)
+    }
+
     private suspend fun startTimer() = withContext(Dispatchers.IO) {
         Thread.sleep(5000)
     }
 }
-

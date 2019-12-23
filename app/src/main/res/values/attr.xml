@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="fab_backgroundTint" format="reference|color" />
+    <attr name="rectangle_center_color" format="reference|color" />
+    <attr name="rectangle_start_color" format="reference|color" />
+    <attr name="rectangle_end_color" format="reference|color" />
+</resources>
